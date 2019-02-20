@@ -6,15 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MkDocsGenerator.GeneratePage.InstallComplements
+namespace MkDocsGenerator.GeneratePage.BuildWebPage
 {
-    class InstallPython
+    class Compile
     {
-        public InstallPython()
+        public Compile()
         {
-            string argument = "cd " + Directory.GetCurrentDirectory() + @" & start /wait Complementos\python-3.7.1.exe";
+            string argument = "cd " + Directory.GetCurrentDirectory() + @"\MkDocs & mkdocs build";
             ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + argument);
-
+            Console.WriteLine(argument);
             procStartInfo.RedirectStandardOutput = true;
             procStartInfo.UseShellExecute = false;
             procStartInfo.CreateNoWindow = true;

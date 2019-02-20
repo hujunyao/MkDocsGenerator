@@ -74,14 +74,16 @@ markdown_extensions:
       permalink: true
 
 # Page tree
-pages:
-- Sub1: 
-    - iniascsdcvsvscio: Sub1/inicio.md
-- Sub2: 
-    - home: Sub2/home.md
-- Sub3: 
-    - home: Sub3/home.md
-
+nav:
+  - Home:
+    - Index: 
+      - Index2: index.md
+      - Index3: 
+        - Index4:
+          - Index4: index.md
+  - Extensions:
+    - About: DocuDesa/about.md
+#endnav
 # Google Analytics
 google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]

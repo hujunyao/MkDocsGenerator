@@ -32,6 +32,7 @@ namespace MkDocsGenerator
         private void btnSalida_Click(object sender, EventArgs e)
         {
             outputFolder = new LoadFolder().loadFolder();
+            Console.WriteLine(outputFolder);
             txtSalida.Text = outputFolder;
         }
 
@@ -57,22 +58,4 @@ namespace MkDocsGenerator
 
 
 
-//System.Diagnostics.Process p = new System.Diagnostics.Process();
-//p.StartInfo.UseShellExecute = false;
-//p.StartInfo.FileName = "cmd.exe";
-//p.StartInfo.Arguments = "/c mkdocs build";
-//p.StartInfo.RedirectStandardError = true;
-//p.StartInfo.RedirectStandardInput = true;
-//p.StartInfo.RedirectStandardOutput = true;
 
-//p.Start();
-
-//StreamReader outputWriter = p.StandardOutput;
-//String errorReader = p.StandardError.ReadToEnd();
-//String line = outputWriter.ReadLine();
-//while (line != null)
-//{
-//    Console.WriteLine(line);
-//    line = outputWriter.ReadLine();
-//}
-//p.WaitForExit();

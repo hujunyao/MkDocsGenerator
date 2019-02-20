@@ -50,9 +50,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEvents\GeneratePage.cs" />
+    <Compile Include="FormEvents\GenerateWebPage.cs" />
     <Compile Include="FormEvents\LoadFolder.cs" />
+    <Compile Include="GeneratePage\BuildWebPage\Compile.cs" />
+    <Compile Include="GeneratePage\BuildWebPage\MoveCompiled.cs" />
     <Compile Include="GeneratePage\CheckComplements.cs" />
+    <Compile Include="GeneratePage\Directories\DirectoryCopy.cs" />
+    <Compile Include="GeneratePage\CreateNav\ReadStructure.cs" />
+    <Compile Include="GeneratePage\CreateNav\WriteStructure.cs" />
+    <Compile Include="GeneratePage\Directories\RemoveDocs.cs" />
+    <Compile Include="GeneratePage\InstallComplements\InstallMkDocs.cs" />
     <Compile Include="GeneratePage\InstallComplements\InstallPython.cs" />
     <Compile Include="GeneratePage\TestComplements\TestMkDocs.cs" />
     <Compile Include="GeneratePage\TestComplements\TestPip.cs" />
@@ -84,10 +91,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Complementos\" />
-    <Folder Include="MkDocs\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
