@@ -22,6 +22,7 @@ namespace MkDocsGenerator.InputOutputFolder
 
                 Program.f1.listboxResultados.Items.Add("Generando nueva barra de navegación...");
                 string contentBar = new ReadStructure().loadContentFolder(inputFolder);
+                Console.Write(contentBar);
                 Program.f1.listboxResultados.Items.Add("Creando archivo mkdocs.yml...");
                 new WriteStructure(contentBar);
 

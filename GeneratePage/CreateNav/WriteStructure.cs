@@ -28,6 +28,7 @@ namespace MkDocsGenerator.GeneratePage.CreateNav
                             using (StreamWriter file = new StreamWriter(NewFilePath, true))
                             {
                                 file.Write(navText);
+                                file.WriteLine("#endnav");
                                 file.WriteLine();
                                 file.Close();
                             }

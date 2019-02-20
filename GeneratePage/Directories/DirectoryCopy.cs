@@ -15,7 +15,7 @@ namespace MkDocsGenerator.GeneratePage.CopyFolder
 
             if (!dir.Exists)
             {
-                throw new DirectoryNotFoundException("La carpeta origen no se ha encontrao" + sourceDirName);
+                throw new DirectoryNotFoundException("No se ha encontrado la carpeta origen" + sourceDirName);
             }
 
             DirectoryInfo[] dirs = dir.GetDirectories();

@@ -74,13 +74,43 @@ markdown_extensions:
       permalink: true
 
 # Page tree
-pages:
-- Sub1: 
-    - iniascsdcvsvscio: Sub1/inicio.md
-- Sub2: 
-    - home: Sub2/home.md
-- Sub3: 
-    - home: Sub3/home.md
+nav:
+  - Sub1 : 
+  - inicio : Sub1/inicio.md
+    - Sub5 : 
+    - juan : Sub5/juan.md
+  - Sub2 : 
+  - home : Sub2/home.md
+    - Sub4 : 
+    - juan : Sub4/juan.md
+  - Sub5 : 
+  - juan : Sub5/juan.md
+  - Sub3 : 
+  - juan : Sub3/juan.md
+#endnav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Google Analytics
 google_analytics:

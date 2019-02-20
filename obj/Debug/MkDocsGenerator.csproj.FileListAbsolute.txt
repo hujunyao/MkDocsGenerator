@@ -6,3 +6,4 @@ C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\obj\Debug\Mk
 C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\obj\Debug\MkDocsGenerator.csproj.GenerateResource.Cache
 C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\obj\Debug\MkDocsGenerator.exe
 C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\obj\Debug\MkDocsGenerator.pdb
+C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\obj\Debug\MkDocsGenerator.csprojResolveAssemblyReference.cache

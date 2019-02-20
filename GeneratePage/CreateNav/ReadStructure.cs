@@ -20,24 +20,43 @@ namespace MkDocsGenerator.GeneratePage.CreateNav
 
         public string writeInMkDocsYml(String path)
         {
-            String newContentBar = "pages:\n";
+            String newContentBar = "nav:\n";
+            newContentBar += makeContentBar(1);
+            return newContentBar;
+        }
+
+
+
+        private string makeContentBar(int tabs)
+        {
+            String contentBar = "";
             foreach (var folder in folders)
             {
+                for (int i = 0; i < tabs; i++)
+                {
+                    contentBar += "  ";
+                }
                 String tempFolder = Path.GetFileName(folder);
-                newContentBar += "- " + tempFolder + ": ";
-                newContentBar += "\n";
-                newContentBar += "  ";
+                contentBar += "- " + tempFolder + " : ";
+                contentBar += "\n";
                 DirectoryInfo di = new DirectoryInfo(folder);
                 foreach (var file in di.GetFiles())
                 {
-                    newContentBar += "  ";
+                    for (int i = 0; i < tabs; i++)
+                    {
+                        contentBar += "  ";
+                    }
                     String name = Path.GetFileNameWithoutExtension(file.Name);
-                    newContentBar += "- " + name + ": " + tempFolder + @"/" + file.Name;
-                    newContentBar += "\n";
+                    contentBar += "- " + name + " : " + tempFolder + @"/" + file.Name;
+                    contentBar += "\n";
                 }
-
+                ReadStructure subfolders = new ReadStructure();
+                subfolders.loadContentFolder(folder);
+                tabs++;
+                contentBar += subfolders.makeContentBar(tabs);
+                tabs = 1;
             }
-            return newContentBar;
+            return contentBar;
         }
     }
 }

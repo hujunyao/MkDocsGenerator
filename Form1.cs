@@ -18,6 +18,14 @@ namespace MkDocsGenerator
         string inputFolder;
         string outputFolder;
 
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
         public Form1()
         {
             InitializeComponent();
@@ -40,6 +48,7 @@ namespace MkDocsGenerator
         {
             if (inputFolder != null || outputFolder != null)
             {
+                listboxResultados.Items.Clear();
                 new GenerateWebPage(inputFolder, outputFolder);
             }
             else
@@ -52,6 +61,32 @@ namespace MkDocsGenerator
         {
             listboxResultados.Items.Add(text);
         }
+
+        private void listboxResultados_SizeChanged(object sender, EventArgs e)
+        {
+            listboxResultados.SelectedIndex = listboxResultados.Items.Count - 1;
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pbMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+
 
     }
 }
