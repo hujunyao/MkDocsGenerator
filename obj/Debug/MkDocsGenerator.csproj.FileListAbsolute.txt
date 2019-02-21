@@ -1,9 +1,11 @@
 C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\bin\Debug\MkDocsGenerator.exe.config
 C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\bin\Debug\MkDocsGenerator.exe
 C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\bin\Debug\MkDocsGenerator.pdb
-C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\obj\Debug\MkDocsGenerator.Form1.resources
+C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\obj\Debug\MkDocsGenerator.BuildPage.resources
+C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\obj\Debug\MkDocsGenerator.Home.resources
 C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\obj\Debug\MkDocsGenerator.Properties.Resources.resources
 C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\obj\Debug\MkDocsGenerator.csproj.GenerateResource.Cache
 C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\obj\Debug\MkDocsGenerator.exe
 C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\obj\Debug\MkDocsGenerator.pdb
 C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\obj\Debug\MkDocsGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Nicolas.angarita\Downloads\MkDocsGenerator\MkDocsGenerator\obj\Debug\MkDocsGenerator.GenerateMd.resources

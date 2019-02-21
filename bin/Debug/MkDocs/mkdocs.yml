@@ -76,18 +76,33 @@ markdown_extensions:
 # Page tree
 nav:
   - Sub1 : 
-  - inicio : Sub1/inicio.md
-    - Sub5 : 
-    - juan : Sub5/juan.md
+    - 'inicio' : Sub1/inicio.md
+    - Sub11 : 
+      - 'juan' : Sub1/Sub11/juan.md
+      - prub111 : 
+        - 'juan' : Sub1/Sub11/prub111/juan.md
   - Sub2 : 
-  - home : Sub2/home.md
-    - Sub4 : 
-    - juan : Sub4/juan.md
-  - Sub5 : 
-  - juan : Sub5/juan.md
+    - 'home' : Sub2/home.md
+    - Sub21 : 
+      - 'juan' : Sub2/Sub21/juan.md
+    - Sub22 : 
+      - 'juan' : Sub2/Sub22/juan.md
+    - Sub23 : 
+      - 'juan' : Sub2/Sub23/juan.md
   - Sub3 : 
-  - juan : Sub3/juan.md
+    - 'juan' : Sub3/juan.md
+    - Sub31 : 
+      - 'juan' : Sub3/Sub31/juan.md
 #endnav
+
+
+
+
+
+
+
+
+
 
 
 

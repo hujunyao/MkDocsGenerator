@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,30 +47,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="buildPage\BuildPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="generateMd\FormEvents\ConverDocxMd.cs" />
+    <Compile Include="generateMd\Pandoc\ConvertDocxMd.cs" />
+    <Compile Include="PublicClasses\DragWindow.cs" />
+    <Compile Include="generateMd\FormEvents\GenerateMdFile.cs" />
+    <Compile Include="generateMd\FormEvents\LoadFile.cs" />
+    <Compile Include="generateMd\GenerateMd.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEvents\GenerateWebPage.cs" />
-    <Compile Include="FormEvents\LoadFolder.cs" />
-    <Compile Include="GeneratePage\BuildWebPage\Compile.cs" />
-    <Compile Include="GeneratePage\BuildWebPage\MoveCompiled.cs" />
-    <Compile Include="GeneratePage\CheckComplements.cs" />
-    <Compile Include="GeneratePage\Directories\DirectoryCopy.cs" />
-    <Compile Include="GeneratePage\CreateNav\ReadStructure.cs" />
-    <Compile Include="GeneratePage\CreateNav\WriteStructure.cs" />
-    <Compile Include="GeneratePage\Directories\RemoveDocs.cs" />
-    <Compile Include="GeneratePage\InstallComplements\InstallMkDocs.cs" />
-    <Compile Include="GeneratePage\InstallComplements\InstallPython.cs" />
-    <Compile Include="GeneratePage\TestComplements\TestMkDocs.cs" />
-    <Compile Include="GeneratePage\TestComplements\TestPip.cs" />
-    <Compile Include="GeneratePage\TestComplements\TestPython.cs" />
+    <Compile Include="generateMd\GenerateMd.Designer.cs">
+      <DependentUpon>GenerateMd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buildPage\GeneratePage.Designer.cs">
+      <DependentUpon>BuildPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buildPage\FormEvents\GenerateWebPage.cs" />
+    <Compile Include="buildPage\GeneratePage\BuildWebPage\Compile.cs" />
+    <Compile Include="buildPage\GeneratePage\BuildWebPage\MoveCompiled.cs" />
+    <Compile Include="buildPage\GeneratePage\CheckComplements.cs" />
+    <Compile Include="buildPage\GeneratePage\Directories\DirectoryCopy.cs" />
+    <Compile Include="buildPage\GeneratePage\CreateNav\ReadStructure.cs" />
+    <Compile Include="buildPage\GeneratePage\CreateNav\WriteStructure.cs" />
+    <Compile Include="buildPage\GeneratePage\Directories\RemoveDocs.cs" />
+    <Compile Include="buildPage\GeneratePage\InstallComplements\InstallMkDocs.cs" />
+    <Compile Include="buildPage\GeneratePage\InstallComplements\InstallPython.cs" />
+    <Compile Include="buildPage\GeneratePage\TestComplements\TestMkDocs.cs" />
+    <Compile Include="buildPage\GeneratePage\TestComplements\TestPip.cs" />
+    <Compile Include="buildPage\GeneratePage\TestComplements\TestPython.cs" />
+    <Compile Include="generateMd\WordHandling\SelectedPages.cs" />
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="PublicClasses\LoadFolder.cs" />
+    <EmbeddedResource Include="buildPage\BuildPage.resx">
+      <DependentUpon>BuildPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="generateMd\GenerateMd.resx">
+      <DependentUpon>GenerateMd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,6 +127,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buildPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\createMd.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

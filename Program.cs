@@ -12,15 +12,13 @@ namespace MkDocsGenerator
         /// The main entry point for the application.
         /// </summary>
         /// 
-        public static Form1 f1;
 
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            f1 = new Form1();
-            Application.Run(f1);
+            Application.Run(new Home());
         }
     }
 }
