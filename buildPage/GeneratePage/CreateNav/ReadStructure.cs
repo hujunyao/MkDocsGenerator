@@ -1,11 +1,5 @@
-﻿using MkDocsGenerator.GeneratePage.CopyFolder;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace MkDocsGenerator.GeneratePage.CreateNav
 {
@@ -28,6 +22,10 @@ namespace MkDocsGenerator.GeneratePage.CreateNav
             String contentBar = "";
             foreach (var folder in folders)
             {
+                if (folder.Contains("[img]"))
+                {
+                    continue;
+                }
                 for (int i = 0; i < tabs; i++)
                 {
                     contentBar += "  ";

@@ -1,0 +1,1119 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.1">
+    
+    
+      
+        <title>iascasc - Documentación FE</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "None", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#tabla-de-contenido-tabla-de-contenido-ttulodetdc" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Documentación FE" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Documentación FE
+            </span>
+            <span class="md-header-nav__topic">
+              iascasc
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="Información previa" class="md-tabs__link md-tabs__link--active">
+          Información previa
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Preguntas Frecuentes/preguntas/" title="Preguntas Frecuentes" class="md-tabs__link">
+          Preguntas Frecuentes
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Recomendaciones/recomendaciones/" title="Recomendaciones" class="md-tabs__link">
+          Recomendaciones
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Documentación FE" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Documentación FE
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Información previa
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Información previa
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="iascasc" class="md-nav__link md-nav__link--active">
+      iascasc
+    </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Preguntas Frecuentes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Preguntas Frecuentes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Preguntas Frecuentes/preguntas/" title="preguntas" class="md-nav__link">
+      preguntas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Recomendaciones
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Recomendaciones
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Recomendaciones/recomendaciones/" title="recomendaciones" class="md-nav__link">
+      recomendaciones
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="tabla-de-contenido-tabla-de-contenido-ttulodetdc"><em>Tabla de contenido</em> {#tabla-de-contenido .TtulodeTDC}<a class="headerlink" href="#tabla-de-contenido-tabla-de-contenido-ttulodetdc" title="Permanent link">&para;</a></h1>
+<p><a href="#información-previa"><em>[Información previa]{.underline}</em> 2</a></p>
+<p><a href="#configuración-de-cuentas-contables"><em>[Configuración de cuentas contables]{.underline}</em>
+2</a></p>
+<p><a href="#configuraciones-módulo-cbr"><em>[Configuraciones módulo CBR]{.underline}</em>
+3</a></p>
+<p><a href="#configuración-facturas-por-mandato"><em>[Configuración facturas por mandato]{.underline}</em>
+3</a></p>
+<p><a href="#configuración-facturas-tipo-de-venta-leasing"><em>[Configuración facturas tipo de venta Leasing]{.underline}</em>
+5</a></p>
+<p><a href="#consulta-de-código-interno-del-documento"><em>[Consulta de código interno del documento]{.underline}</em>
+6</a></p>
+<p><a href="#proceso-de-sincronización"><em>[Proceso de Sincronización]{.underline}</em>
+8</a></p>
+<p><a href="#validaciones-en-el-proceso-de-sincronización"><em>[Validaciones en el proceso de sincronización]{.underline}</em>
+12</a></p>
+<p><a href="#errores-en-el-proceso-de-sincronización"><em>[Errores en el proceso de sincronización]{.underline}</em>
+16</a></p>
+<p><a href="#consulta-de-documentos"><em>[Consulta de documentos]{.underline}</em> 23</a></p>
+<p><a href="#generación-de-archivo-plano"><em>[Generación de archivo plano]{.underline}</em>
+28</a></p>
+<p><a href="#re-sincronizar-documentos"><em>[Re sincronizar documentos]{.underline}</em>
+32</a></p>
+<p><a href="#traslado-de-documentos-a-proveedor-tecnológico"><em>[Traslado de documentos a proveedor tecnológico]{.underline}</em>
+34</a></p>
+<p><a href="#errores-en-el-traslado-de-la-información"><em>[Errores en el traslado de la información]{.underline}</em>
+37</a></p>
+<p><a href="#consulta-de-representación-grafica"><em>[Consulta de representación grafica]{.underline}</em>
+38</a></p>
+<p><a href="#consulta-de-archivo-xml"><em>[Consulta de archivo XML]{.underline}</em> 39</a></p>
+<p><a href="#recomendaciones"><em>[Recomendaciones]{.underline}</em> 40</a></p>
+<p><a href="#preguntas-frecuentes"><em>[Preguntas frecuentes]{.underline}</em> 41</a></p>
+<h1 id="informacion-previa"><em>Información previa</em><a class="headerlink" href="#informacion-previa" title="Permanent link">&para;</a></h1>
+<h2 id="configuracion-de-cuentas-contables"><em>Configuración de cuentas contables</em><a class="headerlink" href="#configuracion-de-cuentas-contables" title="Permanent link">&para;</a></h2>
+<p>El proceso Facturación Electrónica se basa en copiar y homologar la
+información contable de Facturas y Notas crédito. Para que se traslade
+la información correctamente al proveedor tecnológico, se debe realizar
+una configuración contable con el fin de que el sistema identifique como
+debe homologar los valores.</p>
+<p>Cada vez que ejecute la <a href="#proceso-de-sincronización">[sincronización de los
+documentos]{.underline}</a>, el sistema
+validará las cuentas contables que fueron usadas en estos y las agregará
+al maestro que podrá encontrar en la ruta <em>FRO > Facturación >
+FACTURACIÓN ELECTRÓNICA > Configuraciones</em> ficha <em><strong>Cuentas
+contables</strong>.</em></p>
+<p>El sistema realiza una primera validación basándose en la distribución
+de las cuentas según el PUC, asignando uno de los tipos a continuación,
+con el que se realizará la homologación.</p>
+<ul>
+<li>
+<p><em>NO APLICA</em></p>
+</li>
+<li>
+<p><em>AMORTIZACIÓN_ANTICIPO</em></p>
+</li>
+<li>
+<p><em>DESCUENTO</em></p>
+</li>
+<li>
+<p><em>RETEGARANTIA</em></p>
+</li>
+<li>
+<p><em>IVA</em></p>
+</li>
+<li>
+<p><em>COMISIÓN</em></p>
+</li>
+<li>
+<p><em>DEVOLUCIÓN</em></p>
+</li>
+<li>
+<p><em>INGRESO</em></p>
+</li>
+<li>
+<p><em>RFUENTE</em></p>
+</li>
+<li>
+<p><em>RICA</em></p>
+</li>
+<li>
+<p><em>RIVA</em></p>
+</li>
+<li>
+<p><em>TOTPAGAR</em></p>
+</li>
+</ul>
+<p>En caso de no identificar como realiza la contabilización de las
+cuentas, el sistema le solicitará al usuario realizar la configuración
+manualmente. Al ingresar al maestro el sistema marcará las cuentas que
+no tengan un tipo asignado para que pueda configurarlo.</p>
+<p><img alt="" src="../tempDoc[img]/media/image2.png" />{width="5.269530839895013in"
+height="0.7395833333333334in"}</p>
+<h2 id="configuraciones-modulo-cbr"><em>Configuraciones módulo CBR</em><a class="headerlink" href="#configuraciones-modulo-cbr" title="Permanent link">&para;</a></h2>
+<h3 id="configuracion-facturas-por-mandato"><em>Configuración facturas por mandato</em><a class="headerlink" href="#configuracion-facturas-por-mandato" title="Permanent link">&para;</a></h3>
+<p>Debe contar con una clase de proyecto con la marca Fiducia asignada.
+Ingrese a la opción <em>CBR > Configuración > CARTERA > Configuración
+Clases Proyecto.</em></p>
+<p><img alt="" src="../tempDoc[img]/media/image3.png" />{width="5.88125in"
+height="1.2580336832895889in"}</p>
+<p>Registre una nueva clase de proyecto o elija una de las que ya tiene
+creadas en la opción y asigne la marca en la columna Fiducia.</p>
+<p><img alt="" src="../tempDoc[img]/media/image4.png" />{width="5.903230533683289in"
+height="1.26875in"}</p>
+<p>El proyecto debe estar configurado con la clase de proyecto mencionada
+anteriormente.</p>
+<ol>
+<li>
+<p>Consulte el proyecto desde la ruta <em>CBR > Configuración >
+    PROYECTO > Proyectos</em>.</p>
+</li>
+<li>
+<p>Ingrese a la ficha <strong><em>Información Ventas</em></strong> y en la sección
+    <strong><em>Ventas y Porcentajes</em></strong> agregue la clase de proyecto que
+    configuró en el punto anterior.</p>
+</li>
+</ol>
+<p><img alt="" src="../tempDoc[img]/media/image5.png" />{width="5.572291119860018in"
+height="2.2375in"}</p>
+<p>Los datos del mandante se toman directamente de la configuración del
+proyecto.</p>
+<ol>
+<li>
+<p>Diríjase a la ruta <em>CBR > Configuración > PROYECTO > Proyectos</em> y
+    &gt; consulte el proyecto que desea configurar.</p>
+</li>
+<li>
+<p>Ingrese a la ficha <strong><em>Información Ventas</em></strong> y revise que tercero se
+    &gt; encuentra asociado en el campo <strong><em>Entidad Financiera</em></strong>.</p>
+</li>
+</ol>
+<p><img alt="" src="../tempDoc[img]/media/image6.png" />{width="6.164178696412948in"
+height="1.9235837707786527in"}</p>
+<p>Ahora diríjase a la opción <em>CBR > Configuración > CARTERA > Entidades
+Financieras</em> y consulte el tercero.</p>
+<p><img alt="" src="../tempDoc[img]/media/image7.png" />{width="6.191666666666666in"
+height="2.1356386701662293in"}</p>
+<p>Valide que este tenga asociado el NIT con el que se encuentra registrado
+el tercero en el módulo FRO.</p>
+<p><img alt="" src="../tempDoc[img]/media/image8.png" />{width="6.191896325459318in"
+height="2.6268657042869643in"}</p>
+<p>Por ultimo debe llenar los campos <strong><em>Número de contrato</em></strong> y <strong><em>Fecha de
+contrato,</em></strong> en el registro de proyectos ficha <em>Información general</em>.
+<em>Este dato es obligatorio para el envío de los datos de mandato.*</em></p>
+<p><img alt="" src="../tempDoc[img]/media/image9.png" />{width="3.44375in" height="0.59375in"}</p>
+<p><em><strong>NOTA:</strong> En caso de no contar con estos campos, comuníquese con su
+director de implementación.</em></p>
+<h3 id="configuracion-facturas-tipo-de-venta-leasing"><em>Configuración facturas tipo de venta Leasing</em><a class="headerlink" href="#configuracion-facturas-tipo-de-venta-leasing" title="Permanent link">&para;</a></h3>
+<p>El sistema cuenta con una regla, cuando el tipo de venta de la
+agrupación es Leasing, se toma como adquiriente de la factura a la
+entidad de crédito configurada en la venta, el sistema consulta el
+nombre del tercero en la página de entidades financieras y el Nit
+configurado en esta página lo busca en el registro de terceros para
+copiar los datos.</p>
+<p>En caso de no desear que la información se tome de esta manera, indique
+a su director de implementación del proyecto o a la consultora encarga,
+que esta configuración no aplica y que requiere que se tome como
+adquiriente al comprador principal, copiando los datos del mismo
+directamente desde el módulo FRO.</p>
+<h2 id="consulta-de-codigo-interno-del-documento"><em>Consulta de código interno del documento</em><a class="headerlink" href="#consulta-de-codigo-interno-del-documento" title="Permanent link">&para;</a></h2>
+<p>En la opción <strong><em>Consulta de documentos detallados</em></strong> de la ruta <em>FRO >
+Contabilidad > Documentos contables > Informes > Consulta de
+documentos detallados</em>, podrá realizar la búsqueda del documento. Con
+clic derecho podrá habilitar las propiedades de la página para consultar
+el código.</p>
+<p>Si su explorador es Chrome, deberá seleccionar la opción <strong><em>Ver fuente
+de marco</em>.</strong></p>
+<p><img alt="" src="../tempDoc[img]/media/image10.png" />{width="3.7313429571303587in"
+height="3.5514490376202974in"}</p>
+<p>Al seleccionar la opción se habilitará una nueva pestaña la cual
+contiene dentro de su dirección el ID del documento (doc=ID).</p>
+<p><strong><em>Ejemplo:</em></strong> El ID de la factura 638 es 93587.</p>
+<p><img alt="" src="../tempDoc[img]/media/image11.png" />{width="5.8625in"
+height="0.8822265966754156in"}</p>
+<p>Si su explorador es Explorer, deberá seleccionar la opción propiedades.</p>
+<p><img alt="" src="../tempDoc[img]/media/image12.png" />{width="4.203163823272091in"
+height="3.4626859142607174in"}</p>
+<p>En la sección <strong><em>Dirección (URL)</em></strong> en la parte final se podrá consultar
+el número (Doc=ID) del documento.</p>
+<p><img alt="" src="../tempDoc[img]/media/image13.png" />{width="4.320895669291339in"
+height="2.8497954943132107in"}</p>
+<h1 id="proceso-de-sincronizacion"><em>Proceso de Sincronización</em><a class="headerlink" href="#proceso-de-sincronizacion" title="Permanent link">&para;</a></h1>
+<p>Para realizar el proceso de sincronización deberá ingresar a la opción
+<em>Financiero > Facturación > Facturación Electrónica >
+Configuraciones</em>, ficha <strong><em>Sincronización</em></strong>.</p>
+<p><img alt="" src="../tempDoc[img]/media/image14.png" />{width="6.131944444444445in"
+height="1.226388888888889in"}</p>
+<p>Esta cuenta con dos pestañas, en la primera podrá sincronizar la
+información de <em>SINCOERP</em> al proceso de Facturación Electrónica y en la
+segunda pestaña podrá enviar o trasladar los documentos sincronizados al
+proveedor tecnológico.</p>
+<p><img alt="" src="../tempDoc[img]/media/image15.png" />{width="6.131944444444445in"
+height="2.915277777777778in"}</p>
+<p>Al realizar esta sincronización se trasladará la información de
+facturas, notas crédito y documentos de reversión del módulo CBR a la
+base de datos de Facturación Electrónica, la cual procesará la
+información y la homologará para ser entregada al proveedor tecnológico.</p>
+<p>Para realizar la sincronización:</p>
+<ol>
+<li>
+<p>Verifique el NIT emisor, este debe ser el de la compañía.</p>
+</li>
+<li>
+<p>Dentro de la opción Id de los documentos ingrese el <a href="#consulta-de-código-interno-del-documento">[código
+    interno]{.underline}</a> del
+    documento (Factura, Nota crédito, reversión) previamente
+    contabilizado que se requiera sincronizar.</p>
+</li>
+<li>
+<p>Si se requieren sincronizar varios documentos, los códigos internos
+    deben ir separados por comas y sin espacios.</p>
+</li>
+<li>
+<p>Al ingresar los id de los documentos, en la parte inferior en la
+    sección <strong>xmlDocumentos:</strong> podrá visualizar los registros que el
+    proceso sincronizará.</p>
+</li>
+</ol>
+<p><strong><em>Ejemplo:</em></strong> Se ingresa en el campo Id de los documentos el código
+1020, al dar clic fuera del campo se mostrarán los datos en la parte
+inferior y automáticamente se activará el botón para ejecutar el proceso
+de sincronización.</p>
+<p><img alt="" src="../tempDoc[img]/media/image16.png" />{width="6.127777777777778in"
+height="2.7916666666666665in"}</p>
+<p>El sistema permite realizar el traslado de los documentos contabilizados
+que se encuentran pendientes por sincronizar sin necesidad de conocer el
+código de los documentos, esta acción se puede realizar utilizando la
+palabra "TODOS".</p>
+<p>Dentro del campo <strong><em>Id de los documentos</em></strong> se debe digitar exactamente
+la palabra <strong><em>TODOS</em></strong> en mayúscula. Si el ingreso es correcto, en la
+sección <strong>xmlDocumentos</strong> no se mostrarán datos.</p>
+<p><img alt="" src="../tempDoc[img]/media/image17.png" />{width="6.127777777777778in"
+height="2.7756944444444445in"}</p>
+<p>Si el texto se digita erróneamente, el campo <strong>xmlDocumentos</strong> mostrará
+información.</p>
+<p><strong><em>Ejemplo:</em></strong> Si se registra todos en minúscula, el campo
+<strong>xmlDocumentos</strong> mostrará el dato a trasladar, lo cual generará error.</p>
+<p><img alt="" src="../tempDoc[img]/media/image18.png" />{width="6.1375in"
+height="2.8751312335958006in"}</p>
+<p>Entre comillas se muestra la palabra Id=\"<strong>TODOS</strong> \" con el espacio,
+lo cual generará error.</p>
+<p><img alt="" src="../tempDoc[img]/media/image19.png" />{width="6.127777777777778in"
+height="2.879861111111111in"}</p>
+<ol>
+<li>Para terminar con la sincronización de los documentos se debe
+    seleccionar el botón.</li>
+</ol>
+<p><img alt="" src="../tempDoc[img]/media/image20.png" />{width="3.2271784776902885in"
+height="0.3125in"}</p>
+<p>El proceso mostrará el resultado de la sincronización, indicando el
+detalle de los documentos sincronizados.</p>
+<p><img alt="" src="../tempDoc[img]/media/image21.png" />{width="6.136111111111111in"
+height="2.4159722222222224in"}</p>
+<p><strong><em>Estado:</em></strong> El estado mostrará el resultado total del proceso, si se
+generó correctamente (<strong>OK</strong>) o con errores (<strong>ERROR</strong>) en cualquiera de
+las tres validaciones.</p>
+<p><strong><em>Descripción:</em></strong> Este campo indica por separado, el resultado de las
+tres validaciones que realiza el proceso de sincronización.</p>
+<p><strong><em>Fecha:</em></strong> Momento en el que se realizó la sincronización.</p>
+<p><strong><em>No:</em></strong> Orden de procesamiento de los documentos.</p>
+<p><strong><em>Estado:</em></strong> Resultado de la sincronización de cada documento (OK o
+Error).</p>
+<p><strong><em>Nit emisor:</em></strong> Número de identificación de la compañía.</p>
+<p><strong><em>Base datos:</em></strong> Nombre de la base de datos de donde se está tomando la
+información.</p>
+<p><strong><em>Tipo documento:</em></strong> Nombre del tipo de documento que se está
+sincronizando.</p>
+<p><strong><em>Código tipo Documento:</em></strong> Código asignado al tipo de documento en la
+aplicación.</p>
+<p><strong><em>Número documento:</em></strong> Consecutivo del documento.</p>
+<p><strong><em>Id documento:</em></strong> <a href="#consulta-de-código-interno-del-documento">[Código interno del
+documento.]{.underline}</a></p>
+<p><strong><em>Descripción:</em></strong> Especificación del resultado de la sincronización.</p>
+<h2 id="validaciones-en-el-proceso-de-sincronizacion"><em>Validaciones en el proceso de sincronización</em><a class="headerlink" href="#validaciones-en-el-proceso-de-sincronizacion" title="Permanent link">&para;</a></h2>
+<p>En la sincronización de documentos se realizan tres tipos de
+validaciones, generales, de facturas y notas crédito.</p>
+<p>De manera secuencial se aplican las validaciones sobre cada documento
+que no ha sido trasmitido, al cumplir las validaciones los documentos
+pueden ser consultados en los reportes de la opción <strong><em>Facturación
+Electrónica</em></strong>. Debido a que este proceso es jerárquico, si la
+validación del proceso anterior falla la sincronización se detiene y
+ningún documento se sincroniza.</p>
+<p><em><strong>Ejemplo 1:</strong> Si las validaciones son exitosas</em>.</p>
+<p><img alt="" src="../tempDoc[img]/media/image22.png" />{width="6.136111111111111in"
+height="2.752083333333333in"}</p>
+<p><em><strong>Ejemplo 2:</strong> Si las validaciones Generales fallan, toda la
+sincronización se detiene.</em></p>
+<p><strong>*Ejemplo 3:</strong> Si las validaciones de Notas crédito fallan, se
+sincronizan solamente las facturas. *</p>
+<p><strong>Ejemplo 4:</strong> <em>Si no se encuentran facturas para sincronizar, se
+transmiten las Notas crédito.</em></p>
+<p>Algunas validaciones que el sistema realiza a los documentos son:</p>
+<ul>
+<li>
+<p>La Factura o Nota crédito debe estar correctamente contabilizada.</p>
+</li>
+<li>
+<p>La fecha de la factura debe ser igual o mayor a la de puesta en
+    marcha.</p>
+</li>
+<li>
+<p>La factura debe contar como mínimo con una cuenta de ingreso y un
+    total a pagar activo, en el maestro de cuentas contables del sub
+    módulo Facturación Electrónica.</p>
+</li>
+<li>
+<p>Para el caso de las facturas de mandato del módulo CBR, los datos
+    del mandante deben estar completos.</p>
+</li>
+<li>
+<p>Para la transmisión de notas crédito, se debe haber sincronizado
+    previamente la factura relacionada.</p>
+</li>
+<li>
+<p>No se deben presentar saltos en los consecutivos de las facturas.</p>
+</li>
+</ul>
+<h2 id="errores-en-el-proceso-de-sincronizacion"><em>Errores en el proceso de sincronización</em><a class="headerlink" href="#errores-en-el-proceso-de-sincronizacion" title="Permanent link">&para;</a></h2>
+<p>A continuación, se listan los posibles errores que se pueden presentar
+en la sincronización y su solución.</p>
+<p><strong>Tipo Error</strong>   <strong>Resultado</strong>   <strong>Mensaje de resultado</strong>                                                                                                                                                                                                                                                          <strong>Solución</strong>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <strong>Datos específicos</strong></p>
+<hr />
+<p>Principal        OK              La sincronización de documentos electrónicos se ejecutó correctamente. Facturas de venta sincronizadas.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <br />
+                   OK              La sincronización de documentos electrónicos se ejecutó correctamente. No existen documentos factura venta para procesar.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <br />
+                   OK              La sincronización de documentos electrónicos se ejecutó correctamente. Notas crédito sincronizadas.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <br />
+                   OK              La sincronización de documentos electrónicos se ejecutó correctamente. No existen documentos nota crédito para procesar.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <br />
+                   ERROR           Se detectaron inconsistencias al ejecutar la sincronización: Por favor configure las empresas para extraer las facturas en la tabla FAE_SYS.empresa.                                                                                                                             Mediante un Help Desk se debe solicitar la configuración de la empresa.                                                                                                                                                                                                                                                                                                                                                                                                                                     <br />
+                   ERROR           Se detectaron inconsistencias al ejecutar la sincronización: No está configurada la variable \"FECHA_INICIAL_DOCS\", con la fecha de inicial para buscar los documentos contables.                                                                                              Mediante un Help Desk se debe solicitar la configuración de la fecha inicial del proceso de facturación electrónica.                                                                                                                                                                                                                                                                                                                                                                                        <br />
+                   ERROR           Se detectaron inconsistencias al ejecutar la sincronización: No está configurada la variable \"CALCULAR_VALOR_TOTAL_AGRUPACION\", vacío para que el total se calcule con la Cuenta por cobrar, si se requiere agrupar la combinación básica es \"IVA, INGRESO, DEVOLUCION\".   Mediante un Help Desk se debe solicitar la configuración de esta variable a SINCOSOFT.                                                                                                                                                                                                                                                                                                                                                                                                                      <br />
+                   ERROR           Se detectaron inconsistencias al ejecutar la sincronización: No está configurada la variable \"AGRUPA_CONCEPTOS_FACTURACION_INGRESOS\", con los valores \"1\" o \"0\".                                                                                                         Mediante un Help Desk se debe solicitar la configuración de esta variable a SINCOSOFT.                                                                                                                                                                                                                                                                                                                                                                                                                      <br />
+                   ERROR           Se detectaron inconsistencias al ejecutar la sincronización: No existe ningún tipo de documento factura configurado.                                                                                                                                                              Mediante un Help Desk se debe solicitar la configuración de los tipos de documentos a SINCOSOFT.                                                                                                                                                                                                                                                                                                                                                                                                            <br />
+                   ERROR           Se detectaron inconsistencias al ejecutar la sincronización: No existe ningún tipo de documento nota crédito configurado.                                                                                                                                                         Mediante un Help Desk se debe solicitar la configuración de los documentos a SINCOSOFT.                                                                                                                                                                                                                                                                                                                                                                                                                     <br />
+                   ERROR           Se detectaron inconsistencias al ejecutar la sincronización: No existe ningún concepto de facturación configurado.                                                                                                                                                                Mediante un Help Desk se debe solicitar la configuración de los conceptos a SINCOSOFT.                                                                                                                                                                                                                                                                                                                                                                                                                      <br />
+                   ERROR           Se detectaron inconsistencias al ejecutar la sincronización: Existen cuentas contables pendientes por definir en la configuración.                                                                                                                                                Verificar en la configuración contable de Facturación electrónica opción FRO > Facturación > Facturación electrónica > Configuraciones > Cuentas contables, que las cuentas contables que contiene el documento a sincronizar tengan su respectiva asignación en la opción tipo y esta se encuentre activa, de lo contrario se debe realizar la respectiva asignación. Si alguna de las cuentas contables no se encuentra dentro de esta opción se debe remitir el caso mediante Help Desk a SINCOSOFT. <br />
+                   ERROR           Se detectaron inconsistencias al ejecutar la sincronización: No existe ningún tipo de documento de identificación configurado.                                                                                                                                                    Mediante un Help Desk se debe solicitar la configuración de los tipos de documentos a SINCOSOFT.                                                                                                                                                                                                                                                                                                                                                                                                            <br />
+                   ERROR           Se detectaron inconsistencias al ejecutar la sincronización: Facturas de venta con saltos en los consecutivos.                                                                                                                                                                    Se debe verificar si las facturas antecesoras se encuentran trasladadas.                                                                                                                                                                                                                                                                                                                                                                                                                                    <br />
+  Detalle          OK              Factura sincronizada correctamente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <br />
+                   OK              Nota crédito sincronizada correctamente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <br />
+                   OK              Consecutivos verificado.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <br />
+                   OK              NO INSERTA FACTURAS EN TABLAS REALES, EJECUCIÓN DEL PROCESO EN MODO DEPURACIÓN.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <br />
+                   OK              NO INSERTARON NOTAS CRÉDITO EN TABLAS REALES, EJECUCIÓN DEL PROCESO EN MODO DEPURACIÓN.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <br />
+                   ERROR           El consecutivo de la factura anterior no está registrado.                                                                                                                                                                                                                         Verificar si las facturas anteriores se encuentran trasladadas al proceso de facturación electrónica.                                                                                                                                                                                                                                                                                                                                                                                                       <br />
+                   ERROR           No están configurados correctamente los datos principales de la factura.                                                                                                                                                                                                          Se debe validar que estén completos los datos requeridos para transmitir los documentos.                                                                                                                                                                                                                                                                                                                                                                                                                      Datos de la factura.
+                   ERROR           No están configurados correctamente los datos del emisor de la factura.                                                                                                                                                                                                           Validar en la opción Registro de terceros la información de la compañía. A excepción de los datos dirección y teléfono, estos son tomados directamente de la información de la sucursal en la cual se generó la factura.                                                                                                                                                                                                                                                                                      Datos del Emisor.
+                   ERROR           Los datos del cliente de la factura están incompletos.                                                                                                                                                                                                                            Validar la información del cliente en la opción Registro de terceros.                                                                                                                                                                                                                                                                                                                                                                                                                                         Datos del adquiriente.
+                   ERROR           Los datos de los conceptos de facturación ingresados están incompletos.                                                                                                                                                                                                           Mediante un Help Desk se debe solicitar la configuración a SINCOSOFT.                                                                                                                                                                                                                                                                                                                                                                                                                                       <br />
+                   ERROR           Los datos de los conceptos de nota crédito no están correctamente configurados.                                                                                                                                                                                                   Verificar en la opción configuración de cuentas contables de Facturación Electrónica las cuentas contables registradas en la factura.                                                                                                                                                                                                                                                                                                                                                                       <br />
+                   ERROR           No están configurados correctamente los datos principales de la nota crédito.                                                                                                                                                                                                     Mediante un Help Desk se debe solicitar la configuración a SINCOSOFT.                                                                                                                                                                                                                                                                                                                                                                                                                                       <br />
+                   ERROR           No están configurados correctamente los datos del emisor de la nota crédito.                                                                                                                                                                                                      Validar en la opción Registro de terceros la información de la compañía.                                                                                                                                                                                                                                                                                                                                                                                                                                      Datos del Emisor.
+                   ERROR           Los datos del cliente de la nota crédito están incompletos.                                                                                                                                                                                                                       Validar la información del cliente en la opción Registro de terceros.                                                                                                                                                                                                                                                                                                                                                                                                                                         Datos del adquiriente.
+                   ERROR           Los datos de los conceptos de nota crédito ingresos están incompletos.                                                                                                                                                                                                            Verificar en la opción configuración de cuentas contables de Facturación Electrónica las cuentas contables registradas en la factura.                                                                                                                                                                                                                                                                                                                                                                         </p>
+<p><img alt="" src="../tempDoc[img]/media/image23.emf" />{width="6.1375in"
+height="1.6222287839020122in"}</p>
+<blockquote>
+<p><img alt="" src="../tempDoc[img]/media/image24.emf" />{width="6.1375in"
+height="1.8006200787401574in"}</p>
+</blockquote>
+<p><strong>Datos de la factura</strong>   Fecha de la factura</p>
+<hr />
+<pre class="codehilite"><code>                        Número de resolución de facturación
+                        Consecutivo inicial
+                        Consecutivo final
+                        Fecha inicial de resolución
+                        Fecha final de la resolución</code></pre>
+
+
+<h1 id="consulta-de-documentos"><em>Consulta de documentos</em><a class="headerlink" href="#consulta-de-documentos" title="Permanent link">&para;</a></h1>
+<p>Desde la opción <em>FRO > Facturación > Facturación Electrónica >
+Reporte de documentos,</em> en la ficha <strong><em>Facturas</em></strong>, podrá visualizar las
+facturas que han sido sincronizadas y el estado en el que se encuentra
+la transmisión de estas al proveedor tecnológico.</p>
+<p>Al ingresar a la opción encontrará seis filtros que facilitarán la
+consulta de datos.</p>
+<p><strong><em>Cantidad de registros:</em></strong> Este filtro hace referencia a la cantidad
+de documentos a consultar.</p>
+<p><img alt="" src="../tempDoc[img]/media/image25.png" />{width="2.1354166666666665in"
+height="0.8645833333333334in"}</p>
+<p><strong><em>*Fecha inicial y Fecha final:</em></strong> En este filtro deberá seleccionar
+un rango de fechas, teniendo en cuenta que el sistema solamente
+consultará los documentos creados en ese periodo de tiempo. *<strong><em>Estos
+campos son obligatorios para realizar la consulta del informe.</em></strong></p>
+<p><img alt="" src="../tempDoc[img]/media/image26.png" />{width="4.020833333333333in"
+height="0.9895833333333334in"}</p>
+<p><strong><em>Origen de factura:</em></strong> Con este filtro podrá consultar documentos
+desde un módulo determinado.</p>
+<p><img alt="" src="../tempDoc[img]/media/image27.png" />{width="3.0833333333333335in"
+height="2.09375in"}</p>
+<p><strong><em>Tipo documento:</em></strong> Con este filtro podrá consultar documentos con un
+tipo de documento en particular.</p>
+<p><img alt="" src="../tempDoc[img]/media/image28.png" />{width="2.2604166666666665in"
+height="1.3020833333333333in"}</p>
+<p><strong><em>Numero documento:</em></strong> Aquí podrá digitar el consecutivo para consultar
+un documento en específico.</p>
+<p><img alt="" src="../tempDoc[img]/media/image29.png" />{width="2.3048611111111112in"
+height="0.9805555555555555in"}</p>
+<p>Al seleccionar un rango de fechas, se habilitará el botón consultar, al
+hacer clic sobre este el sistema dibujará un informe con los resultados
+de su consulta.</p>
+<p><img alt="" src="../tempDoc[img]/media/image30.png" />{width="6.129861111111111in"
+height="2.714583333333333in"}</p>
+<p>Este informe contiene ocho columnas en las cuales podrá visualizar la
+información básica de los documentos como:</p>
+<p><img alt="" src="../tempDoc[img]/media/image31.png" />{width="0.19631999125109362in"
+height="0.20683180227471565in"}<strong><em>Número:</em></strong> Esta columna cuenta con dos
+enlaces, el primero es el consecutivo del documento, al hacer clic sobre
+este se abrirá una nueva pestaña donde podrá visualizar el PDF de la
+factura generado por SINCO, el segundo icono le permitirá la consulta
+del documento contable del mismo.</p>
+<p><strong><em>Tipo:</em></strong> Hace referencia al tipo de documento con el cual se generó
+la factura.</p>
+<p><strong><em>Tercero:</em></strong> Adquiriente o tercero al que se le genero el documento.</p>
+<p><strong><em>Fecha contable:</em></strong> Fecha del documento.</p>
+<p><strong><em>Descripción:</em></strong> Descripción registrada al momento de generar el
+documento.</p>
+<p><strong><em>Estado:</em></strong> Estos indicarán en que proceso se encuentra el envió del
+documento al proveedor tecnológico.</p>
+<p><strong><em>Nota crédito relacionada:</em></strong> Si la factura cuenta con una nota
+crédito se mostrará su consecutivo.</p>
+<p><strong><em>Acciones:</em></strong> Esta columna cuenta con un botón, el cual al dar clic
+sobre él, se abrirá un modal donde podrá visualizar tres pestañas con el
+detalle del documento.</p>
+<p><strong><em>Pestaña 1: General</em></strong></p>
+<p>En esta pestaña se mostrará información básica del documento.</p>
+<p><img alt="" src="../tempDoc[img]/media/image32.png" />{width="3.351881014873141in"
+height="3.447853237095363in"}</p>
+<p><strong><em>Descripción general:</em></strong> Hace referencia al texto digitado en el campo
+descripción o servicio, al momento de generar el documento.</p>
+<p><strong><em>Fecha factura:</em></strong> Fecha del documento seleccionado.</p>
+<p><strong><em>CUFE (Código único de facturación electrónica):</em></strong> Este código es el
+número de identificación de la factura y lo genera el proveedor
+tecnológico al momento de recibir la información del documento.<em>*Este
+dato es traído desde la plataforma del proveedor.</em></p>
+<p><strong><em>Número factura:</em></strong> Consecutivo del documento.</p>
+<p><strong><em>Nit emisor:</em></strong> Número de identificación de la empresa que generó el
+documento.</p>
+<p><strong><em>Fecha registro:</em></strong> Fecha en la cual se sincronizó el documento al
+proceso de Facturación Electrónica.</p>
+<p><strong><em>Estado notificación correo:</em></strong> Indica si la notificación del
+documento fue enviada al adquiriente exitosamente. <em>*Este dato es
+traído desde la plataforma del proveedor.</em></p>
+<p><strong><em>Estado entrega:</em></strong> Indica si el documento ya fue aceptada o rechazada
+por el cliente. <em>*Este dato es traído desde la plataforma del
+proveedor.</em></p>
+<p><strong><em>Comunicación DIAN:</em></strong> Indica si el documento fue aceptado por la DIAN
+o presenta errores. <em>*Este dato es traído desde la plataforma del
+proveedor.</em></p>
+<p><strong><em>Ver Json Proveedor:</em></strong> Al dar clic sobre el botón se mostrará la
+información que se enviará al proveedor especificando la etiqueta en la
+cual será trasmitida.</p>
+<p><strong><em>Ver Json Sinco:</em></strong> Al dar clic sobre el botón podrá visualizar la
+misma información pero de una manera más clara, para que el usuario
+pueda validar la información del documento, antes de transmitirlo.</p>
+<p><strong><em>Volver a trasladar desde el ERP:</em></strong> <a href="#re-sincronizar-documentos">[Re sincronizar
+documentos]{.underline}</a></p>
+<p><strong><em>Pestaña 2: Seguimiento interno </em></strong></p>
+<p>En esta pestaña se muestran los errores que puede presentar el documento
+en el envío al proveedor<em>.</em></p>
+<p><img alt="" src="../tempDoc[img]/media/image33.png" />{width="4.8111843832021in"
+height="2.5833333333333335in"}</p>
+<p><strong><em>Pestaña 3: Proveedor tecnológico </em></strong></p>
+<p>En esta pestaña podrá visualizar la auditoria de los cambios presentados
+en los estados del documento, después de realizar el envío al proveedor.</p>
+<p><img alt="" src="../tempDoc[img]/media/image34.png" />{width="5.153373797025372in"
+height="2.3330468066491687in"}</p>
+<h1 id="generacion-de-archivo-plano"><em>Generación de archivo plano</em><a class="headerlink" href="#generacion-de-archivo-plano" title="Permanent link">&para;</a></h1>
+<p>Desde la ruta <em>FRO > Facturación > Facturación Electrónica > Reporte
+de documentos</em>, en la ficha <strong><em>Informe estructura estándar facturas</em></strong>,
+podrá realizar la consulta y exportación del consolidado de las facturas
+contabilizadas, teniendo en cuenta los filtros que realice. A
+continuación, encontrará los pasos para generar el informe.</p>
+<p>La opción contará con cinco filtros que facilitará la consulta de los
+datos.</p>
+<p><img alt="" src="../tempDoc[img]/media/image35.png" />{width="5.688311461067366in"
+height="0.8665080927384077in"}</p>
+<p><strong><em>Fecha inicial y Fecha final</em></strong>: En este filtro deberá seleccionar un
+rango de fechas, teniendo en cuenta que el sistema solamente consultará
+los documentos creados en ese periodo de tiempo. <strong>**Estos campos son
+obligatorios para realizar la consulta del informe.</strong>*</p>
+<p><img alt="" src="../tempDoc[img]/media/image36.png" />{width="4.292361111111111in"
+height="0.8958333333333334in"}</p>
+<p><strong><em>Origen de factura:</em></strong> Con este filtro podrá consultar los documentos
+generados desde un módulo determinado.</p>
+<p><img alt="" src="../tempDoc[img]/media/image27.png" />{width="3.0833333333333335in"
+height="2.09375in"}</p>
+<p><strong><em>Tipo documento:</em></strong> Con este podrá consultar los documentos generados
+con un tipo de documento en particular.</p>
+<p><img alt="" src="../tempDoc[img]/media/image28.png" />{width="2.2604166666666665in"
+height="1.3020833333333333in"}</p>
+<p><strong><em>Numero documento:</em></strong> Aquí podrá digitar el consecutivo y consultar un
+documento en específico.</p>
+<p><img alt="" src="../tempDoc[img]/media/image29.png" />{width="2.3048611111111112in"
+height="0.9805555555555555in"}</p>
+<p>Al seleccionar un rango de fechas, se habilitará el botón consultar, al
+hacer clic sobre este el sistema dibujará un informe con los resultados
+de su consulta.</p>
+<p><img alt="" src="../tempDoc[img]/media/image37.png" />{width="6.083333333333333in"
+height="2.8181813210848645in"}</p>
+<p>El informe contiene diez columnas donde podrá identificar la información
+básica del documento como:</p>
+<p><strong><em>Número:</em></strong> Consecutivo del documento.</p>
+<p><strong><em>Tipo:</em></strong> Hace referencia al tipo de documento con el cual se generó
+la factura.</p>
+<p><strong><em>Fecha contable:</em></strong> Fecha del documento.</p>
+<p><strong><em>Descripción:</em></strong> Descripción registrada al momento de generar el
+documento.</p>
+<p><strong><em>Origen de factura:</em></strong> Indica desde que modulo fue generado el
+documento.</p>
+<p><strong><em>Tercero:</em></strong> Adquiriente o tercero al que se le generó el documento.</p>
+<p><strong><em>Nota crédito relacionado:</em></strong> Si la factura cuenta con una nota
+crédito se mostrará su consecutivo.</p>
+<p><strong><em>Moneda:</em></strong> Indica la moneda con el cual fue generado el documento .</p>
+<p><strong><em>Valor total:</em></strong> Valor total de la factura.</p>
+<p><strong><em>Ver factura:</em></strong> Esta columna cuenta con un enlace, al dar clic sobre
+este se abrirá una nueva pestaña donde podrá visualizar el PDF de la
+factura generado por SINCO.</p>
+<p>Para exportar el archivo seleccione el botón descargar, podrá consultar
+el consolidado en la carpeta de descargas del equipo donde esté
+realizando la acción.</p>
+<p><img alt="" src="../tempDoc[img]/media/image38.png" />{width="6.122222222222222in"
+height="2.8159514435695536in"}</p>
+<p><img alt="" src="../tempDoc[img]/media/image39.png" />{width="2.2in"
+height="1.325404636920385in"}</p>
+<p>Para visualizar el consolidado de manera clara y organizada, abra el
+archivo <em>Macro archivo plano -- FE</em>, relacionado por la consultora del
+proceso, haga clic sobre el botón <em>Importar archivo .CSV facturación
+electrónica</em> y seleccione el consolidado.</p>
+<p><img alt="" src="../tempDoc[img]/media/image40.png" />{width="5.06875in"
+height="2.653254593175853in"}</p>
+<p>Se agregará automáticamente una nueva hoja con 88 columnas que incluyen
+toda la información de los documentos.</p>
+<p><img alt="" src="../tempDoc[img]/media/image41.png" />{width="5.8901060804899386in"
+height="2.2208595800524935in"}</p>
+<h2 id="re-sincronizar-documentos"><em>Re sincronizar documentos</em><a class="headerlink" href="#re-sincronizar-documentos" title="Permanent link">&para;</a></h2>
+<p>Esta funcionalidad fue creada con el fin de que el usuario pueda
+modificar la información de los documentos, antes de realizar el envío a
+la plataforma del proveedor tecnológico, en caso de haberlo realizado se
+deberá crear una nota crédito por el valor total de la factura por el
+mismo módulo por donde generó la misma.</p>
+<p>En la ruta <em>FRO > Facturación > FACTURACIÓN ELECTRÓNICA > Reporte de
+documentos</em>, ingrese a la ficha <strong><em>Facturas.</em></strong> A continuación, consulte
+un documento que se encuentre en estado pendiente por enviar o en error
+y en la columna <em>Acciones</em> haga clic sobre el botón <em>Ver</em>.</p>
+<p><img alt="" src="../tempDoc[img]/media/image42.png" />{width="3.395323709536308in"
+height="1.1168832020997375in"}</p>
+<p>Se abrirá el modal con la información básica del documento, en la parte
+inferior encontrará un botón de color rojo con la descripción <strong><em>Volver
+a trasladar desde el ERP</em></strong>, este le permitirá re sincronizar o volver a
+copiar la información del documento al proceso de Facturación
+Electrónica, con la condición de que el estado del documento sea
+distinto a <em>Recibido por provee</em>dor.</p>
+<p><img alt="" src="../tempDoc[img]/media/image43.png" />{width="3.9102416885389326in"
+height="4.024000437445319in"}</p>
+<h1 id="traslado-de-documentos-a-proveedor-tecnologico"><em>Traslado de documentos a proveedor tecnológico</em><a class="headerlink" href="#traslado-de-documentos-a-proveedor-tecnologico" title="Permanent link">&para;</a></h1>
+<p>Después de realizar la validación de los documentos con el archivo
+plano, se deben trasladar la información al proveedor tecnológico.
+Ingrese a la opción <em>FRO > Facturación > FACTURACIÓN ELECTRÓNICA >
+CONFIGURACIONES</em> en la ficha de <strong><em>Sincronización</em><em>,</em> diríjase a la
+pestaña *Sincronizar documentos con </strong>proveedor *<em><em>y haga clic sobre el
+botón </em>Ejecutar sincronización con el proveedor tecnológico.</em></p>
+<p><img alt="" src="../tempDoc[img]/media/image44.png" />{width="6.131944444444445in"
+height="2.245138888888889in"}</p>
+<p>Al realizar esta acción el sistema hará el envío de todos los documentos
+que se encuentren en estado <em>Pendiente por enviar</em> y mostrará un modal
+con el estado del traslado.</p>
+<p><img alt="" src="../tempDoc[img]/media/image45.png" />{width="5.886792432195976in"
+height="2.1188451443569556in"}</p>
+<p>Al ingresar al reporte de documentos en la ficha <em><strong>Facturas</strong>,</em> podrá
+ver que el estado de los documentos cambio a <em>Recibido por proveedor.</em></p>
+<p><img alt="" src="../tempDoc[img]/media/image46.png" />{width="6.131944444444445in"
+height="1.0284722222222222in"}</p>
+<p>El modal con el detalle del documento también cambiará. Ahora cada vez
+que haga clic sobre el botón, el sistema realizará una consulta en la
+plataforma del proveedor, para que pueda visualizar los estados de
+envío, tanto de la notificación enviada al adquiriente, como la
+aceptación por parte de la DIAN.</p>
+<p><img alt="" src="../tempDoc[img]/media/image47.png" />{width="5.541666666666667in"
+height="5.974465223097113in"}</p>
+<p><img alt="" src="../tempDoc[img]/media/image48.png" />{width="5.698113517060367in"
+height="5.277451881014873in"}</p>
+<p><em><strong>NOTA:</strong> SincoERP no realiza la generación de representaciones
+graficas ni el envío de notificaciones de documentos, en caso de
+presentar inconsistencias en estos comuníquese con su proveedor
+tecnológico.</em></p>
+<h2 id="errores-en-el-traslado-de-la-informacion"><em>Errores en el traslado de la información</em><a class="headerlink" href="#errores-en-el-traslado-de-la-informacion" title="Permanent link">&para;</a></h2>
+<p>A continuación relacionamos los posibles errores que se pueden presentar
+al momento de realizar el traslado de la información y su
+interpretación.</p>
+<p>Error                                                                                                                                                                          Interpretación</p>
+<hr />
+<p>SalesInvoice.SellerContracts[0].ContractCode                                                                                                                                 El número de contrato de mandato no está configurado y este es requerido por el proveedor tecnológico.
+  SerieNumberGreaterThanSerieEndValue                                                                                                                                            El consecutivo de la factura es mayor al consecutivo final registrado en la serie de en la plataforma del proveedor tecnológico.
+  \"SalesInvoice.CustomerParty.Email\\",\\"Code\\":\\"Invalid\\"                                                                                                            El correo del adquiriente es inválido.
+  CreditNote.SerieExternalKey\\",\\"Code\\":\\"Required                                                                                                                      No se encuentra configurada la clave externa para el tipo de documento que se está tratando de trasladar.
+  System.Exception: Error La factura con Id 'XX' no tiene detalles                                                                                                               La cuenta de ingreso de la factura se encuentra deshabilitada.
+  Actualmente hay facturas en estado error, por lo cual no se permite realizar la sincronización al proveedor. Re traslade y verifique las facturas en estado error.             Debe ingresar a la opción reporte de documentos ficha Facturas y consultar el error que indica el sistema en la factura con estado <em>Error enviando al proveedor</em>.
+  Actualmente hay notas crédito en estado error, por lo cual no se permite realizar la sincronización al proveedor. Re traslade y verifique las notas crédito en estado error.   Debe ingresar a la opción reporte de documentos ficha Notas crédito y consultar el error que indica el sistema en la nota crédito con estado <em>Error enviando al proveedor.</em></p>
+<h2 id="consulta-de-representacion-grafica"><em>Consulta de representación grafica</em><a class="headerlink" href="#consulta-de-representacion-grafica" title="Permanent link">&para;</a></h2>
+<p>Después de realizar el traslado de los documentos, podrá realizar la
+consulta de la representación gráfica generada por el proveedor
+tecnológico, ingresando a la opción <em>FRO > Facturación > FACTURACIÓN
+ELECTRÓNICA > Reporte de documentos</em> ficha <em><strong>Facturas</strong>,</em> consulte las
+facturas y en la columna <em>Acciones</em> haga clic sobre el botón <em>Ver</em>.</p>
+<p><img alt="" src="../tempDoc[img]/media/image49.png" />{width="5.557200349956256in"
+height="5.729166666666667in"}</p>
+<p>En la parte inferior del modal con la información del documento, podrá
+encontrar un botón el cual al hace clic sobre él, se abrirá una nueva
+pestaña donde automáticamente se descargara el PDF del documento.</p>
+<p><em><strong>NOTA:</strong> SincoERP no realiza ningún tipo de almacenamiento de este
+documento, solamente consulta los archivos directamente en la plataforma
+del proveedor para su visualización.</em></p>
+<h2 id="consulta-de-archivo-xml"><em>Consulta de archivo XML</em><a class="headerlink" href="#consulta-de-archivo-xml" title="Permanent link">&para;</a></h2>
+<p>Después de realizar el envío de los documentos, podrá realizar la
+consulta del archivo XML generado por el proveedor tecnológico,
+ingresando a la opción <em>FRO > Facturación > FACTURACIÓN ELECTRÓNICA >
+Reporte de documentos</em> ficha <em><strong>Facturas</strong>,</em> consulte las facturas y en
+la columna <em>Acciones</em> haga clic sobre el botón <em>Ver</em>.</p>
+<p><img alt="" src="../tempDoc[img]/media/image50.png" />{width="4.947916666666667in"
+height="5.3105489938757655in"}</p>
+<p>En la parte inferior del modal con la información del documento, podrá
+encontrar un botón el cual al hace clic sobre él, se abrirá una nueva
+pestaña donde automáticamente se descargará el XML del documento.</p>
+<p><em><strong>NOTA:</strong> SincoERP no realiza ningún tipo de almacenamiento de este
+documento, solamente consulta los archivos directamente en la plataforma
+del proveedor para su visualización.</em></p>
+<h1 id="recomendaciones"><em>Recomendaciones</em><a class="headerlink" href="#recomendaciones" title="Permanent link">&para;</a></h1>
+<ul>
+<li>
+<p>Si requiere re sincronizar un documento valide que el documento
+    cuenta con todas los datos necesarios para la sincronización, en
+    caso de no ser así el sistema eliminará el registro de Facturación
+    Electrónica, debido a que no cumple con las condiciones necesarias
+    para realizar el proceso.</p>
+</li>
+<li>
+<p>No genere facturas con fecha anterior a la última trasladada
+    exitosamente al proveedor tecnológico, puesto que el proveedor
+    rechazará estas facturas y se presentará un bloque ya que el sistema
+    no permite realizar envíos con registros en estado error.</p>
+</li>
+</ul>
+<h1 id="preguntas-frecuentes"><em>Preguntas frecuentes</em><a class="headerlink" href="#preguntas-frecuentes" title="Permanent link">&para;</a></h1>
+<p>*La información contenida en este documento es confidencial y propiedad
+de SINCOSOFT S.A.S. *</p>
+<p><em>SINCOSOFT S.A.S. entrega este manual bajo el entendimiento de que será
+manejado en forma estrictamente confidencial y no será divulgado,
+duplicado o usado, completa o parcialmente, con ningún otro propósito
+diferente al de dar a conocer el manejo correcto y óptimo de las
+herramientas que están integradas en el software SINCO ERP del módulo
+SINCO SGD, sin el previo consentimiento escrito por parte de SINCOSOFT
+S.A.S.</em></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="../../Preguntas Frecuentes/preguntas/" title="preguntas" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                preguntas
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/squidfunk" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/squidfunk" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/squidfunk" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.43ad2ac2.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

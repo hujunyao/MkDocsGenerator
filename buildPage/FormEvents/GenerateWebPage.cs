@@ -3,12 +3,7 @@ using MkDocsGenerator.GeneratePage.BuildWebPage;
 using MkDocsGenerator.GeneratePage.CopyFolder;
 using MkDocsGenerator.GeneratePage.CreateNav;
 using MkDocsGenerator.GeneratePage.Directories;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MkDocsGenerator.InputOutputFolder
 {

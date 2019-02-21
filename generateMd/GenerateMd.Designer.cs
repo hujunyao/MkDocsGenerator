@@ -41,10 +41,22 @@
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlPages = new System.Windows.Forms.Panel();
+            this.pnlSelectedPages = new System.Windows.Forms.Panel();
+            this.nudTo = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.nudFrom = new System.Windows.Forms.NumericUpDown();
+            this.rbSelectedPages = new System.Windows.Forms.RadioButton();
+            this.rbCompletePage = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlPages.SuspendLayout();
+            this.pnlSelectedPages.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFrom)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -64,6 +76,7 @@
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.pnlPages);
             this.panel1.Controls.Add(this.richtextResult);
             this.panel1.Controls.Add(this.btnGenerar);
             this.panel1.Controls.Add(this.label1);
@@ -79,9 +92,9 @@
             // 
             // richtextResult
             // 
-            this.richtextResult.Location = new System.Drawing.Point(13, 250);
+            this.richtextResult.Location = new System.Drawing.Point(13, 263);
             this.richtextResult.Name = "richtextResult";
-            this.richtextResult.Size = new System.Drawing.Size(720, 160);
+            this.richtextResult.Size = new System.Drawing.Size(720, 147);
             this.richtextResult.TabIndex = 8;
             this.richtextResult.Text = "";
             // 
@@ -93,7 +106,7 @@
             this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10F);
             this.btnGenerar.ForeColor = System.Drawing.Color.White;
-            this.btnGenerar.Location = new System.Drawing.Point(38, 191);
+            this.btnGenerar.Location = new System.Drawing.Point(44, 218);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(663, 39);
             this.btnGenerar.TabIndex = 7;
@@ -128,7 +141,7 @@
             this.btnSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalida.Font = new System.Drawing.Font("Microsoft JhengHei UI", 10F);
             this.btnSalida.ForeColor = System.Drawing.Color.Black;
-            this.btnSalida.Location = new System.Drawing.Point(584, 138);
+            this.btnSalida.Location = new System.Drawing.Point(584, 174);
             this.btnSalida.Name = "btnSalida";
             this.btnSalida.Size = new System.Drawing.Size(149, 28);
             this.btnSalida.TabIndex = 5;
@@ -156,7 +169,7 @@
             // 
             this.txtSalida.Enabled = false;
             this.txtSalida.Font = new System.Drawing.Font("Consolas", 13F);
-            this.txtSalida.Location = new System.Drawing.Point(125, 138);
+            this.txtSalida.Location = new System.Drawing.Point(125, 174);
             this.txtSalida.Name = "txtSalida";
             this.txtSalida.Size = new System.Drawing.Size(439, 28);
             this.txtSalida.TabIndex = 4;
@@ -165,7 +178,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 15F);
-            this.label2.Location = new System.Drawing.Point(17, 107);
+            this.label2.Location = new System.Drawing.Point(17, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(262, 28);
             this.label2.TabIndex = 3;
@@ -205,6 +218,119 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // pnlPages
+            // 
+            this.pnlPages.Controls.Add(this.pnlSelectedPages);
+            this.pnlPages.Controls.Add(this.rbSelectedPages);
+            this.pnlPages.Controls.Add(this.rbCompletePage);
+            this.pnlPages.Enabled = false;
+            this.pnlPages.Location = new System.Drawing.Point(125, 77);
+            this.pnlPages.Name = "pnlPages";
+            this.pnlPages.Size = new System.Drawing.Size(439, 63);
+            this.pnlPages.TabIndex = 9;
+            // 
+            // pnlSelectedPages
+            // 
+            this.pnlSelectedPages.Controls.Add(this.nudTo);
+            this.pnlSelectedPages.Controls.Add(this.label5);
+            this.pnlSelectedPages.Controls.Add(this.label4);
+            this.pnlSelectedPages.Controls.Add(this.nudFrom);
+            this.pnlSelectedPages.Enabled = false;
+            this.pnlSelectedPages.Location = new System.Drawing.Point(264, 4);
+            this.pnlSelectedPages.Name = "pnlSelectedPages";
+            this.pnlSelectedPages.Size = new System.Drawing.Size(175, 50);
+            this.pnlSelectedPages.TabIndex = 15;
+            // 
+            // nudTo
+            // 
+            this.nudTo.Location = new System.Drawing.Point(81, 30);
+            this.nudTo.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudTo.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudTo.Name = "nudTo";
+            this.nudTo.Size = new System.Drawing.Size(82, 20);
+            this.nudTo.TabIndex = 14;
+            this.nudTo.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Candara", 9F);
+            this.label5.Location = new System.Drawing.Point(4, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 14);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Hasta:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Candara", 9F);
+            this.label4.Location = new System.Drawing.Point(3, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 14);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Desde:";
+            // 
+            // nudFrom
+            // 
+            this.nudFrom.Location = new System.Drawing.Point(81, 3);
+            this.nudFrom.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudFrom.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudFrom.Name = "nudFrom";
+            this.nudFrom.Size = new System.Drawing.Size(82, 20);
+            this.nudFrom.TabIndex = 11;
+            this.nudFrom.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // rbSelectedPages
+            // 
+            this.rbSelectedPages.AutoSize = true;
+            this.rbSelectedPages.Font = new System.Drawing.Font("Candara", 9F);
+            this.rbSelectedPages.Location = new System.Drawing.Point(0, 27);
+            this.rbSelectedPages.Name = "rbSelectedPages";
+            this.rbSelectedPages.Size = new System.Drawing.Size(238, 18);
+            this.rbSelectedPages.TabIndex = 14;
+            this.rbSelectedPages.Text = "Convertir todo las páginas seleccionadas:";
+            this.rbSelectedPages.UseVisualStyleBackColor = true;
+            this.rbSelectedPages.CheckedChanged += new System.EventHandler(this.rbSelectedPages_CheckedChanged);
+            // 
+            // rbCompletePage
+            // 
+            this.rbCompletePage.AutoSize = true;
+            this.rbCompletePage.Checked = true;
+            this.rbCompletePage.Font = new System.Drawing.Font("Candara", 9F);
+            this.rbCompletePage.Location = new System.Drawing.Point(0, 3);
+            this.rbCompletePage.Name = "rbCompletePage";
+            this.rbCompletePage.Size = new System.Drawing.Size(175, 18);
+            this.rbCompletePage.TabIndex = 13;
+            this.rbCompletePage.TabStop = true;
+            this.rbCompletePage.Text = "Convertir todo el documento";
+            this.rbCompletePage.UseVisualStyleBackColor = true;
+            this.rbCompletePage.CheckedChanged += new System.EventHandler(this.rbCompletePage_CheckedChanged);
+            // 
             // GenerateMd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,6 +352,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlPages.ResumeLayout(false);
+            this.pnlPages.PerformLayout();
+            this.pnlSelectedPages.ResumeLayout(false);
+            this.pnlSelectedPages.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFrom)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,5 +378,13 @@
         private System.Windows.Forms.TextBox txtSalida;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox richtextResult;
+        private System.Windows.Forms.Panel pnlPages;
+        private System.Windows.Forms.Panel pnlSelectedPages;
+        private System.Windows.Forms.NumericUpDown nudTo;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown nudFrom;
+        private System.Windows.Forms.RadioButton rbSelectedPages;
+        private System.Windows.Forms.RadioButton rbCompletePage;
     }
 }

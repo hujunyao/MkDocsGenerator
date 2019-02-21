@@ -50,8 +50,10 @@
     <Compile Include="buildPage\BuildPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="generateMd\FormEvents\ConverDocxMd.cs" />
-    <Compile Include="generateMd\Pandoc\ConvertDocxMd.cs" />
+    <Compile Include="generateMd\Conversion\ConvertDocxMd.cs" />
+    <Compile Include="generateMd\Conversion\ShowPreview.cs" />
+    <Compile Include="generateMd\WordHandling\CopyDocument.cs" />
+    <Compile Include="generateMd\WordHandling\PageCount.cs" />
     <Compile Include="PublicClasses\DragWindow.cs" />
     <Compile Include="generateMd\FormEvents\GenerateMdFile.cs" />
     <Compile Include="generateMd\FormEvents\LoadFile.cs" />
@@ -68,7 +70,7 @@
     <Compile Include="buildPage\GeneratePage\BuildWebPage\Compile.cs" />
     <Compile Include="buildPage\GeneratePage\BuildWebPage\MoveCompiled.cs" />
     <Compile Include="buildPage\GeneratePage\CheckComplements.cs" />
-    <Compile Include="buildPage\GeneratePage\Directories\DirectoryCopy.cs" />
+    <Compile Include="PublicClasses\DirectoryCopy.cs" />
     <Compile Include="buildPage\GeneratePage\CreateNav\ReadStructure.cs" />
     <Compile Include="buildPage\GeneratePage\CreateNav\WriteStructure.cs" />
     <Compile Include="buildPage\GeneratePage\Directories\RemoveDocs.cs" />

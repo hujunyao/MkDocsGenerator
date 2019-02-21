@@ -1,13 +1,7 @@
 ﻿using MkDocsGenerator.generateMd.FormEvents;
+using MkDocsGenerator.generateMd.WordHandling;
 using MkDocsGenerator.InputOutputFolder;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MkDocsGenerator
@@ -16,6 +10,7 @@ namespace MkDocsGenerator
     {
         private string inputFile;
         private string outputFolder;
+        int pageCount = 0;
 
         public GenerateMd()
         {
@@ -26,6 +21,17 @@ namespace MkDocsGenerator
         {
             inputFile = new LoadFile().GetFile();
             txtDocumento.Text = inputFile;
+            if (!String.IsNullOrEmpty(inputFile))
+            {
+                pnlPages.Enabled = true;
+                pageCount = new PagesCount().GetPagesCount(inputFile);
+                nudTo.Value = pageCount;
+                nudTo.Maximum = pageCount;
+            }
+            else
+            {
+                pnlPages.Enabled = false;
+            }
         }
 
         private void btnSalida_Click(object sender, EventArgs e)
@@ -58,11 +64,27 @@ namespace MkDocsGenerator
             if (inputFile != null || outputFolder != null)
             {
                 richtextResult.Text = "";
-                new GenerateMdFile(inputFile, outputFolder);
+                new GenerateMdFile(inputFile, outputFolder, Convert.ToInt32(nudFrom.Value), Convert.ToInt32(nudTo.Value), pageCount, rbCompletePage.Checked);
             }
             else
             {
                 MessageBox.Show("No se han seleccionado los directorios");
+            }
+        }
+
+        private void rbCompletePage_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbCompletePage.Checked)
+            {
+                pnlSelectedPages.Enabled = false;
+            }
+        }
+
+        private void rbSelectedPages_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbSelectedPages.Checked)
+            {
+                pnlSelectedPages.Enabled = true;
             }
         }
     }

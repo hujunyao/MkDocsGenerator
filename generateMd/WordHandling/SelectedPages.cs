@@ -1,74 +1,80 @@
 ﻿using Microsoft.Office.Interop.Word;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace MkDocsGenerator.generateMd.WordHandling
 {
     class SelectedPages
     {
-        public SelectedPages(string inputFile, string outputFolder)
+        public SelectedPages(string inputFile, string outputTempFile, int start, int end, int total)
         {
+
             Microsoft.Office.Interop.Word.Application word = new Microsoft.Office.Interop.Word.Application();
             object oMissing = System.Reflection.Missing.Value;
+
             try
             {
-                // Create a new Microsoft Word application object
-                
                 word.Visible = true;
-
-                //word.Visible = false;
-                //word.ScreenUpdating = false;
-
-                // Cast as Object for word Open method
                 Object filename = inputFile;
 
-                // Use the dummy value as a placeholder for optional arguments
                 Microsoft.Office.Interop.Word.Document doc = word.Documents.Open(ref filename, ref oMissing,
                     ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing,
                     ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing,
                     ref oMissing, ref oMissing, ref oMissing, ref oMissing);
-                //doc.Activate();
-                object what = WdGoToItem.wdGoToPage;
-                object which = WdGoToDirection.wdGoToFirst;
 
-                object count = 1;
-                Range startRange = word.Selection.GoTo(ref what, ref which, ref count, ref oMissing);
-                object count2 = (int)count + 1;
-                Range endRange = word.Selection.GoTo(ref what, ref which, ref count2, ref oMissing);
-                endRange.SetRange(startRange.Start, endRange.End - 1);
-                endRange.Select();
-                word.Selection.Copy();
-                //word.Documents.Close();
-                //word.Quit();
+            word.Documents.Add();
 
-                word.Documents.Add();
-                word.Selection.Paste();
 
-                //Microsoft.Office.Interop.Word.Application word1 = new Microsoft.Office.Interop.Word.Application();
-                object outputFileName = outputFolder + @"\doc.docx";
-                object fileFormat = WdSaveFormat.wdFormatPDF;
+            Range Selection = doc.Range();
 
-                word.ActiveDocument.SaveAs(ref outputFileName,
-                    ref fileFormat, ref oMissing, ref oMissing,
-                    ref oMissing, ref oMissing, ref oMissing, ref oMissing,
-                    ref oMissing, ref oMissing, ref oMissing, ref oMissing,
-                    ref oMissing, ref oMissing, ref oMissing, ref oMissing);
+            Selection.Start = Selection.GoTo(
+                    What: WdGoToItem.wdGoToPage,
+                    Which: WdGoToDirection.wdGoToFirst,
+                    Count: start
+                ).Start;
 
-                object saveChanges = WdSaveOptions.wdDoNotSaveChanges;
-                word.Documents.Close(ref saveChanges, ref oMissing, ref oMissing);
-                doc = null;
-            }
-            catch(Exception ex)
+
+            if (end == total)
             {
-                MessageBox.Show(ex.ToString());
+                Selection.End = doc.Range().End;
+            }
+            else
+            {
+                Selection.End = Selection.GoTo(
+                    What: WdGoToItem.wdGoToPage,
+                    Which: WdGoToDirection.wdGoToAbsolute,
+                    Count: end + 1
+                ).Start - 1;
+            }
+
+            Selection.Copy();
+            word.Selection.Paste();
+            Clipboard.Clear();
+
+            object outputFileName = outputTempFile;
+
+            word.ActiveDocument.SaveAs(ref outputFileName,
+                ref oMissing, ref oMissing, ref oMissing,
+                ref oMissing, ref oMissing, ref oMissing, ref oMissing,
+                ref oMissing, ref oMissing, ref oMissing, ref oMissing,
+                ref oMissing, ref oMissing, ref oMissing, ref oMissing);
+
+            object saveChanges = WdSaveOptions.wdDoNotSaveChanges;
+            word.Documents.Close(ref saveChanges, ref oMissing, ref oMissing);
+            doc = null;
+            }
+            catch
+            {
+                if (File.Exists(outputTempFile))
+                {
+                    File.Delete(outputTempFile);
+                }
+                throw new Exception("Ocurrió un error durante el proceso de selección de páginas");
             }
             finally
             {
-                ((_Application)word).Quit(ref oMissing, ref oMissing, ref oMissing);
+                ((_Application)word).Quit();
                 word = null;
             }
         }
